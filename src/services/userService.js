@@ -18,7 +18,7 @@ class UserService {
   }
 
   async updateUser(id, data) {
-    await this.getUserById(id); // Garante que o usuário existe
+    await this.getUserById(id);
     return await userRepository.update(id, data);
   }
 

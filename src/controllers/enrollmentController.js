@@ -8,7 +8,6 @@ class EnrollmentController {
       const enrollment = await enrollmentService.execute(userId, courseId);
       return sendResponse(res, 201, true, "Matrícula realizada com sucesso", enrollment);
     } catch (error) {
-      // Se for erro de "não encontrado", status 404, se for "duplicado", status 409
       const status = error.message.includes("não encontrado") ? 404 : 409;
       return sendResponse(res, status, false, error.message);
     }

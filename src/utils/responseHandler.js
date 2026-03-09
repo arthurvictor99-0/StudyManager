@@ -1,4 +1,3 @@
-// Função utilitária para manter todas as respostas iguais
 const sendResponse = (res, statusCode, success, message, data = null) => {
   return res.status(statusCode).json({
     success,
